@@ -203,7 +203,8 @@ function calculateTotal(empId) {
 function updateGrandTotal() {
     let grandSum = 0;
     document.querySelectorAll('.emp-total').forEach(el => {
-        grandSum += parseFloat(el.innerText.replace(/,/g, '') || 0);
+        let tozaRaqam = el.innerText.replace(/[^0-9]/g, '');
+         grandSum += parseFloat(tozaRaqam || 0);
     });
     const grandEl = document.getElementById('grand-total-sum');
     if (grandEl) grandEl.innerText = grandSum.toLocaleString();
