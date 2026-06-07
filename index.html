@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Payroll Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+
+</head>
+<body>
+    <div class="main-content" style="padding: 20px;">
+        <h1>Ishchilar Oylik Hisoboti</h1>
+        
+        <table id="employee-table">
+            <thead>
+            <tr>
+                    <th id="top-month-th" colspan="37" style="text-align: center; background-color: #607d8b; color: white; padding: 10px;">
+                        <input type="month" id="report-month" value="2026-05" onchange="loadData()"style="margin-left: 0px; cursor: pointer; border: none; padding: 5px; border-radius: 4px; font-weight: bold;">
+                    </th>
+                </tr>   
+                <tr id="days-header-row">
+                </tr>
+            
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        
+        <button onclick="addEmployee()" style="margin-top: 15px; padding: 10px 20px; cursor: pointer;">Yangi ishchi qo'shish</button>
+   
+     
+        <div>
+                <input type="month" id="report-month" onchange="loadData()" style="margin-left: 0px; cursor: pointer; border: none; padding: 5px; border-radius: 4px; font-weight: bold;">
+            </div>
+
+           
+        </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

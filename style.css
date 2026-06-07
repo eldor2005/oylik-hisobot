@@ -1,0 +1,270 @@
+/* Asosiy sozlamalar */
+body { font-family: sans-serif; background: #f4f7f6; padding: 20px; }
+.main-content { max-width: 1400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+
+/* Boshqaruv paneli */
+.toolbar { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #2c3e50; color: white; border-radius: 8px; margin-bottom: 20px; }
+.print-btn { cursor: pointer; padding: 5px 15px; border: none; background: #27ae60; color: white; border-radius: 4px; }
+
+/* Jadval */
+table { border-collapse: collapse; width: 100%; background: white; }
+th, td { border: 1px solid #ccc; padding: 5px; text-align: center; transition: background-color 0.2s; }
+th { background-color: #2c3e50; color: white; font-size: 11px; cursor: default; }
+
+/* Inputlar */
+input { border: 1px solid #ddd; padding: 3px; width: 100%; text-align: center; box-sizing: border-box; }
+#report-month { background: #ffffff; color: #333; border: none; padding: 4px 8px; border-radius: 4px; }
+
+/* O'chirish tugmasi */
+.delete-btn { 
+    position: absolute; right: 5px; top: 50%; transform: translateY(-50%); 
+    opacity: 0.3; color: #ff5252; border: none; background: none; 
+    font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+tr:hover .delete-btn { opacity: 1; }
+
+/* Ustunni ajratish */
+.highlight-column { background-color: #eef2f5 !important; }
+th.highlight-column { background-color: #546e7a !important; color: white; }
+th:hover { background-color: #546e7a !important; }
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff5252;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: 0.3s;
+    flex-shrink: 0; /* Tugma siqilmasligi uchun */
+}
+
+
+/* 1. UMUMIY ORQA FON (Och va ko'zga charchoq bermaydigan rang) */
+body {
+    background-color: #f4f7f6; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. ASOSIY KARTA (Oppoq, yumshoq soyali va chetlari silliq) */
+.main-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Muallaq turgan effekt */
+    max-width: 98%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* Sarlavha */
+h1 {
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* 3. JADVAL DIZAYNI */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+/* Kataklar */
+th, td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #000000; /* Juda och nafis chiziq */
+    text-align: center;
+}
+
+/* Jadval sarlavhasi (Trenddagi Indigo rangi) */
+th {
+    background-color: #1e293b; 
+    color: #f8fafc;
+    border-right: 1px solid #334155;
+    font-weight: 500;
+    padding: 12px 4px;
+}
+
+/* Qatorga sichqoncha borgandagi Hover effekt */
+tbody tr:hover {
+    background-color: #f8fafc; /* Ohista och ko'k rangga kiradi */
+    transition: background-color 0.2s ease;
+}
+
+/* 4. KATAKCHALAR (Inputlar) DIZAYNI */
+input[type="text"], input[type="month"] {
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 6px;
+    padding: 6px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #1e293b;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Katakchaga bosganda chiroyli yonishi */
+input[type="text"]:focus, input[type="month"]:focus {
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* 5. TUGMA DIZAYNI (Zamoniviy 3D effekt) */
+button {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Tugma ustiga borganda tepaga ko'tarilishi */
+button:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+}
+/* O'chirish tugmasi (X) - qizil */
+button.delete-btn {
+    background: transparent;
+    color: #ef4444;
+    box-shadow: none;
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button.delete-btn:hover {
+    background: #fee2e2;
+    color: #dc2626;
+    transform: translateY(-50%) scale(1.1);
+}
+
+td 
+
+
+
+
+tr:hover .delete-btn { opacity: 1; }
+
+
+/* ==================================================== */
+/* BARCHA OYLAR UCHUN UMUMIY KUNLIK KATAKCHALAR (28, 30, 31 kun) */
+/* ==================================================== */
+
+/* "day-cell" so'zi qatnashgan barcha ustunlar (oy necha kun bo'lishidan qat'i nazar) */
+td[class*="day-cell"] {
+    vertical-align: middle !important;
+    text-align: center !important;
+    padding: 2px !important;
+}
+
+/* Katakcha ichidagi inputlarni qat'iy va ixcham Kvadrat qilish */
+td[class*="day-cell"] input {
+    width: 26px !important;  
+    height: 26px !important; 
+    margin: 2px auto !important; 
+    display: block !important;
+    text-align: center !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+    border: 1px solid #cbd5e1 !important; 
+    border-radius: 4px !important; 
+    background-color: transparent !important;
+    box-sizing: border-box !important;
+}
+
+/* Ustiga bosganda chiroyli yonishi */
+td[class*="day-cell"] input:focus {
+    background-color: #e0e7ff !important;
+    border-color: #4f46e5 !important;
+    outline: none !important;
+}
+
+/* ==================================================== */
+/* JADVALNI EKRANGA MOSLASH VA QOTIRISH (STICKY) */
+/* ==================================================== */
+
+/* Yozuvlar siqilib, ikkinchi qatorga tushib ketmasligi uchun */
+th, td {
+    white-space: nowrap !important; 
+}
+
+/* 2-ustun ("Ism Familiya") chap tomonda qotib turishi uchun */
+th:nth-child(2), 
+td:nth-child(2) {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 10 !important;
+    background-color: #ffffff !important;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05) !important; /* Ajralib turishi uchun mayin soya */
+}
+
+/* Sarlavhadagi "Ism Familiya" qismi ko'k rangda qotib turishi uchun */
+th:nth-child(2) {
+    background-color: #1e293b!important;
+    color: #f8fafc!important;
+    border-right: 1px solid #334155;
+    z-index: 11 !important;
+}
+/* Kataklar */
+th, td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #000000; 
+    border-right: 1px solid #000000; /* O'NG VERTIKAL CHIZIQ */
+    border-left: 1px solid #000000;  /* CHAP VERTIKAL CHIZIQ */
+    text-align: center;
+}
+/* ==================================================== */
+/* SUPER QOTIRISH: HAM YONGA, HAM TEPAGA (100% ISHLAYDI) */
+/* ==================================================== */
+
+/* 1. Asosiy oyna o'zida skroll bo'lishi kerak, shundagina tepa qotadi */
+.main-content {
+    max-height: 80vh !important; /* Ekran balandligining 80% ida qotib, ichidan skroll ochiladi */
+    overflow: auto !important; /* Ham yonga, ham pastga skrollni yoqamiz */
+}
+
+/* 2. Tepadagi sarlavha (Ishchilar hisobi va Kunlar) to'liq qotadi */
+thead {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 20 !important;
+    background-color: #1e293b !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important; /* Pastga tushganda chiroyli soya */
+}
+
+/* 3. Tepa va yon qator kesishgan burchak ("Ism Familiya" sarlavhasi) */
+thead th:nth-child(2) {
+    position: sticky !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 30 !important; /* Eng baland nuqta, hech narsa uni ustidan o'tolmaydi */
+    background-color: #1e293b !important;
+    border-right: 2px solid #000000 !important;
+}
+
+/* 4. Pastdagi oddiy Ismlar ustuni qotib turishi uchun */
+tbody td:nth-child(2) {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 10 !important;
+    background-color: #ffffff !important;
+    border-right: 2px solid #000000 !important;
+}
