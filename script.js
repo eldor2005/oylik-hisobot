@@ -166,10 +166,14 @@ function calculateTotal(empId) {
 
         // 1. Plyuslarni Hamma Lavozim uchun hisoblash
         if (plusVal !== '') {
+               if (plusVal === '0.5') {
+                      totalPlusSoni +=0.5;
+                      total += wage /2;
+               }else {
             const plusCount = (plusVal.match(/\+/g) || []).length;
             totalPlusSoni += plusCount;
             total += plusCount * wage;
-        }
+        }}
         
         // 2. Moshina sonlarini faqat Operatorlar uchun hisoblash
         if(minusEl && minusEl.value !== '') {
@@ -232,7 +236,14 @@ function updateRow(empId) {
     renderTable(); // Keyin butun jadvalni toza qilib qayta chizamiz
 }
 
-function validateSymbol(input) { input.value = input.value.replace(/[^+\-]/g, '').substring(0, 2); }
+function validateSymbol(input) { 
+    let toza = input.value.replace(/[^+\-0\.5]/g, '');
+    if (toza.includes('+') || toza.includes('-')) {
+        input.value = toza.substring(0, 2);
+    }else {
+        input.value = toza.substring(0, 3); }}
+
+
 function validateNumber(input) { input.value = input.value.replace(/[^0-9]/g, ''); }
 function addEmployee() { const name = prompt("Ism Familiya:"); if(name) { employees.push({id: Date.now(), name}); renderTable(); } }
 function removeEmployee(id) { if(confirm("O'chirmoqchimisiz?")) { employees = employees.filter(e => e.id !== id); renderTable(); } }
