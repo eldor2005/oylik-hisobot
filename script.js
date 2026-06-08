@@ -18,6 +18,13 @@ window.onload = function() {
             table.parentNode.insertBefore(priceDiv, table);
         }
     }
+
+       const bugun = new Date();
+        const yil = bugun.getFullYear();
+        const oy = String(bugun.getMonth() + 1).padStart(2, '0');
+        document.getElementById('report-month').value = `${yil}-${oy}`;
+
+       
     // --------------------------------------
     loadData();
 };
